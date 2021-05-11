@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login Page</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1 class="label">User Login</h1>
+		<h5>Enter your credentials and get access</h5>
+		<form class="login_form" method="post" name="form" onsubmit="return validated()" action="home.html">
+			<div class="font">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				Username
+			</div>
+			<input autocomplete="off" placeholder="Username" type="text" name="email">
+			<div id="email_error">Please fill up your Username</div>
+			<br>
+			<div class="font">
+				<i class="fa fa-key" aria-hidden="true"></i>
+				Password
+			</div>
+			<input type="password" placeholder="Password" name="password" id="myInput">
+			<span class="eye" onclick="myFunction()">
+				<i id="hide1" class="fa fa-eye" aria-hidden="true"></i>
+				<i id="hide2" class="fa fa-eye-slash" aria-hidden="true"></i>
+			</span>
+			<div id="pass_error">Please fill up your Password</div>
+			<a href="forgot_password.html">Forgot Password?</a>
+			<button type="submit">Sign In</button>
+		</form>
+		
+	</div>	
+	<script src="valid.js"></script>
+	<style>
+		a:link, a:visited {
+  				background-color: #f44336;
+  				color: white;
+				padding: 15px 25px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				}
+
+		a:hover, a:active {
+  				background-color: red;
+				}
+	</style>
+</body>
+</html>
