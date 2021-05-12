@@ -1,19 +1,19 @@
 	//Validtion Code For Inputs
 
-var email = document.forms['form']['email'];
+var username = document.forms['form']['username'];
 var password = document.forms['form']['password'];
 
-var email_error = document.getElementById('email_error');
+var username_error = document.getElementById('username_error');
 var pass_error = document.getElementById('pass_error');
 
-email.addEventListener('textInput', email_Verify);
+username.addEventListener('textInput', username_Verify);
 password.addEventListener('textInput', pass_Verify);
 
 function validated(){
-	if (email.value.length < 1) {
-		email.style.border = "1px solid red";
-		email_error.style.display = "block";
-		email.focus();
+	if (username.value.length < 1) {
+		username.style.border = "1px solid red";
+		username_error.style.display = "block";
+		username.focus();
 		return false;
 	}
 	
@@ -25,11 +25,11 @@ function validated(){
 	}
 
 }
-function email_Verify(){
-	if (email.value.length >= 0) {
-		email.style.border = "none";
-		email.style.borderBottom = "1px solid goldenrod";
-		email_error.style.display = "none";
+function username_Verify(){
+	if (username.value.length >= 0) {
+		username.style.border = "none";
+		username.style.borderBottom = "1px solid goldenrod";
+		username_error.style.display = "none";
 		return true;
 	}
 }
